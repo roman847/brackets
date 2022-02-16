@@ -1,20 +1,20 @@
 module.exports = function check(str, bracketsConfig) {
-  let arrStr = str.split("");
+  let arrFromString = str.split("");
 
   for (let i = 0; i < bracketsConfig.length; i++) {
-    let arr = bracketsConfig[i];
+    let array = bracketsConfig[i];
 
-    for (let j = 0; j < arrStr.length; j++) {
-      if (arrStr[j] == arr[0] && arrStr[j + 1] == arr[1]) {
-        arrStr.splice(j, 2);
-        j -= 2;
+    for (let j = 0; j < arrFromString.length; j++) {
+      if (arrFromString[j] == array[0] && arrFromString[j + 1] == array[1]) {
+        arrFromString.splice(j, 2);
+        j = j - 2;
         i = -1;
-        if (!arrStr.length) {
-          return true;
+        if (arrFromString.length) {
+          return false;
         }
       }
     }
   }
 
-  return false;
+  return true;
 };
