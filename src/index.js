@@ -9,9 +9,7 @@ module.exports = function check(str, bracketsConfig) {
         arrFromString.splice(j, 2);
         j -= 2;
         i = -1;
-        if (arrFromString.length) {
-          return false;
-        } else {
+        if (!arrFromString.length) {
           return true;
         }
       }
