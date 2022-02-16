@@ -7,7 +7,7 @@ module.exports = function check(str, bracketsConfig) {
     for (let j = 0; j < arrFromString.length; j++) {
       if (arrFromString[j] == array[0] && arrFromString[j + 1] == array[1]) {
         arrFromString.splice(j, 2);
-        j = j - 2;
+        j -= 2;
         i = -1;
         if (arrFromString.length) {
           return false;
