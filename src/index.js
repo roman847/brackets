@@ -11,6 +11,8 @@ module.exports = function check(str, bracketsConfig) {
         i = -1;
         if (arrFromString.length) {
           return false;
+        } else {
+          return true;
         }
       }
     }
